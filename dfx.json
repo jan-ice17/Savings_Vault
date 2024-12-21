@@ -1,21 +1,13 @@
 {
   "canisters": {
     "savingvault_backend": {
-      "build": "npx azle savingvault_backend",
-      "candid": "src/savingvault_backend/savingvault_backend.did",
-      "gzip": true,
-      "main": "src/savingvault_backend/src/index.ts",
-      "tech_stack": {
-        "cdk": {
-          "azle": {}
-        },
-        "language": {
-          "javascript": {},
-          "typescript": {}
-        }
-      },
       "type": "custom",
-      "wasm": ".azle/savingvault_backend/savingvault_backend.wasm"
+      "build": "npx azle savingvault_backend",
+      "root": "src/savingvault_backend",
+      "ts": "src/savingvault_backend/src/savings_vault.ts",
+      "candid": "src/savingvault_backend/savingvault_backend.did",
+      "wasm": ".azle/savingvault_backend/savingvault_backend.wasm.gz",
+      "gzip": true
     }
   },
   "defaults": {

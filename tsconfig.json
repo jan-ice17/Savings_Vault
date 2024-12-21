@@ -6,6 +6,9 @@
         "strictPropertyInitialization": false,
         "moduleResolution": "node",
         "allowJs": true,
-        "outDir": "HACK_BECAUSE_OF_ALLOW_JS"
+        "outDir": "HACK_BECAUSE_OF_ALLOW_JS",
+        "lib": ["ES2020"],
+        "module": "ES2020",
+        "skipLibCheck": true
     }
 }

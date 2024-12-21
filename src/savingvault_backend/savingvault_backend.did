@@ -1,3 +1,32 @@
+type SavingsError = record {
+    kind: text;
+    message: text;
+};
+
+type PlanType = record {
+    kind: text;
+};
+
+type SavingsPlan = record {
+    id: text;
+    owner: principal;
+    planType: PlanType;
+    amount: nat64;
+    interestRate: nat64;
+    startTime: nat64;
+    duration: nat64;
+    isActive: bool;
+    maturityDate: nat64;
+};
+
+type CreatePlanInput = record {
+    planType: PlanType;
+    amount: nat64;
+    duration: nat64;
+};
+
 service : {
-    "greet" : (text) -> (text) query;
-}
+    getUserPlans : () -> (variant { Ok: vec SavingsPlan; Err: SavingsError }) query;
+    createSavingsPlan : (CreatePlanInput) -> (variant { Ok: SavingsPlan; Err: SavingsError });
+    withdrawFromPlan : (text) -> (variant { Ok: nat64; Err: SavingsError });
+};

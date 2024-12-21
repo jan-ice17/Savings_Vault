@@ -1,9 +1,8 @@
 {
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=7.0.0"
-  },
   "name": "savingvault",
+  "version": "1.0.0",
+  "description": "Savings Vault DApp on Internet Computer",
+  "main": "index.js",
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "prebuild": "npm run prebuild --workspaces --if-present",
@@ -14,5 +13,9 @@
   "type": "module",
   "workspaces": [
     "src/savingvault_backend"
-  ]
+  ],
+  "engines": {
+    "node": "^18",
+    "npm": "^9"
+  }
 }
